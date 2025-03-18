@@ -7,3 +7,5 @@ Demo                                 | Description
 [BeagleBone/Black](BeagleBone/Black) | Demos for the Black and Green families of Bones.  This includes the wirelss versions too.
 [PocketBeagle 2](PocketBeagle-2)     | Demos for the smallest of Beagles.
 
+## Main Project - Laser Project
+
