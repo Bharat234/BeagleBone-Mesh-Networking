@@ -9,3 +9,4 @@ Demo                                 | Description
 
 ## Main Project - Laser Project
 
+--> Refer to the Laser Project README.md for documentation.
