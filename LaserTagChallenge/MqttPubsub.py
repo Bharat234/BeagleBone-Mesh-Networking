@@ -5,9 +5,9 @@ import paho.mqtt.client as mqtt
 import os
 
 # Define GPIO pins on P9
-IR_LED_PIN = "P9_11"     # Used for both IR transmission and visual feedback
-IR_SENSOR_PIN = "P9_12"  # IR sensor for detecting incoming signals
-BUZZER_PIN = "P9_13"     # Buzzer for game-over indication
+IR_LED_PIN = "LED_GPIO_PIN"     # Used for both IR transmission and visual feedback
+IR_SENSOR_PIN = "IR_GPIO_PIN"  # IR sensor for detecting incoming signals
+BUZZER_PIN = "BUZZER_GPIO_PIN"     # Buzzer for game-over indication
 
 # Setup pins: IR LED and Buzzer as outputs; IR Sensor as input
 GPIO.setup(IR_LED_PIN, GPIO.OUT)
@@ -15,7 +15,7 @@ GPIO.setup(IR_SENSOR_PIN, GPIO.IN)
 GPIO.setup(BUZZER_PIN, GPIO.OUT)
 
 # MQTT Setup
-BROKER = "192.168.0.104"  # Replace with your MQTT broker's IP address
+BROKER = "BROKER_IP"  # Replace with your MQTT broker's IP address
 TOPIC = "laser_tag/shoot"
 PLAYER_ID = input("Enter your Player ID: ")  # Unique ID for each BBB
 
@@ -24,7 +24,7 @@ client.connect(BROKER, 1883, 60)
 client.subscribe(TOPIC)
 
 # Initialize player HP (health points)
-local_hp = 10
+local_hp = 10 # Can change according to requirements
 
 # Dictionary to track all players' HP; use a lock for thread safety
 players = {}
